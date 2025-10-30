@@ -1,0 +1,191 @@
+*{
+
+:root {
+    --dark-bg: #121212;
+    --card-bg-dark: #242424;
+    --text-color-light: #ffffff;
+    --green-main: #66cc33;
+    --healthy-food-bg: #4caf50;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color-light);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--green-main);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.projects-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(3, 1fr); 
+    
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.project-card {
+    background-color: var(--card-bg-dark);
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 250px;
+    
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    
+
+
+    background-size: cover; 
+    background-position: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--shadow-color);
+}
+
+.card-content {
+    padding: 10px;
+    z-index: 2;
+}
+
+.card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.healthy-foods-theme {
+
+    grid-column: span 1; 
+    grid-row: span 2; 
+    background: linear-gradient(135deg, var(--healthy-food-bg) 0%, #388e3c 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px;
+    text-align: right;
+    border-radius: 0 0 0 50px;
+}
+
+.healthy-foods-theme .text-content {
+    text-align: right;
+}
+
+.healthy-foods-theme h2 {
+    color: var(--text-color-light);
+    font-size: 2em;
+}
+
+.healthy-foods-theme p {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: var(--text-color-light);
+    color: var(--healthy-food-bg);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.2s;
+}
+
+.read-more-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.read-more-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.large-card {
+    min-height: 400px;
+}
+.medium-card {
+    min-height: 400px;
+}
+
+
+.green-theme {
+    background-image: url
+    background-color: var(--green-main);
+}
+
+.white-theme {
+    background-image: url('placeholder-white-project.jpg'
+    background-color: #e0e0e0;
+    color: #333; 
+}
+
+
+.bottom-row {
+    min-height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.dark-content-card {
+    background-image: url('placeholder-dark-small.jpg');
+    
+}
+.light-content-card {
+    background-image: url('placeholder-light-small.jpg');
+}
+.final-card {
+    background-image: url('placeholder-final-small.jpg');
+}
+
+
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .healthy-foods-theme {
+        grid-column: span 1;
+        grid-row: span 1;
+        border-radius: 12px;
+        min-height: 300px;
+    }
+    .large-card, .medium-card, .small-card {
+        min-height: 200px;
+    }
+}
+}
